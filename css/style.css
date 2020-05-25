@@ -6,11 +6,16 @@ p, img {
     box-sizing: border-box;
 }
 
+/* custom CSS property */
+body {
+    --main-text-color: blanchedalmond;
+}
+
 /* Header start */
 
 .header {
     display: flex;
-    color: blanchedalmond;
+    color: var(--main-text-color);
     padding: 0 20px;
     text-align: center;
 
@@ -36,6 +41,7 @@ p, img {
     width: 20%;
     text-align: center;
     padding: 20px 10px;
+    cursor: pointer;
 }
 
 .header .nav ul li:hover {
@@ -66,18 +72,24 @@ p, img {
 .banner .bcont  {
     text-align: center;
     padding: 100px;
-    color: blanchedalmond;
+    color: var(--main-text-color);
 }
 .banner .bcont p {
     margin: 20px 0;
 }
 
-.banner ul {
+.banner button {
+    cursor: pointer;
+    outline: none;
     background-color: rgb(123, 129, 134);
     height: 50px;
     width: 120px;
     margin: 20px auto;
-    border: 1px blanchedalmond solid;
+    border: 1px var(--main-text-color) solid;
+}
+.banner button:hover {
+    background-color: #333;
+    color: var(--main-text-color);
 }
 
 .banner ul li {
@@ -171,7 +183,7 @@ p, img {
 }
 .container > .bg1 {
     background-image: url(../images/bg1.jpg);
-    color: blanchedalmond;
+    color: var(--main-text-color);
 }
 
 .container > .bg2 {
